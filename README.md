@@ -3,7 +3,7 @@
 
 ## Application that Provides Restaraunts with Financial and Technological Services 
 
-I want to create a full stack application that allows restaurants to have access to financial and technological advantages, similar to shopify, but with greater capabilities. Currently, I am interning for a startup called Weat (I've just accepted the offer yesterday (9/9/2020)), and I'm working with two highly intelligent Columbia Alumni, who are currently employed at BCG. I'm building an application for them from scratch to help them present their services. We are a team of two developers, Tommy Gomez, and myself. We hope that we can have a joint project for this class. We believe that teamwork is the only way to make the dream work, especially in engineering projects. We are both highly motivated, and will be putting in similar amounts of work, as you will see in our future commits.
+I want to create a full stack application that allows restaurants to have access to financial and technological advantages, similar to shopify, but with greater capabilities. Currently, Tommy Gomez and I (Lucas Jerez) am interning for a startup called Weat (we just have accepted the offer yesterday (9/9/2020)). We will be working with two highly intelligent Columbia alumni who are currently employed at BCG. We will be building an application from scratch with the features that are listed bellow. We are a team of two developers, and we hope that we can have a joint project for this class. We believe that teamwork is the only way to make the dream work, especially in engineering projects. We are both highly motivated and excited to start this project, and will be putting in similar amounts of work, as you will see in our future commits.
 
 ## Features
 
