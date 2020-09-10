@@ -13,7 +13,7 @@ After this, we are looking to add more features such as financial reports, predi
 
 ## Closing Remarks
 
-We will need to use Git version control, React for the front end, and Python the backend. This class would be the perfect opportunity to recieve guidance in this workflow (that is quite new to us), and ultimately build a better application.
+We will need to use Git version control, React for the front end, and Python the backend. This class would be the perfect opportunity to receive guidance in this workflow (that is quite new to us), and ultimately build a better application.
 
 The COVID19 pandemic has brought restaurant businesses in a precarious position, with many facing or already experiencing closure. I truly believe that this application can help remedy the situation and have a positive social impact.
 
