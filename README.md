@@ -3,7 +3,7 @@
 
 ## Application that Provides Restaraunts with Financial and Technological Services 
 
-I want to create a full stack application that allows restaurants to have access to financial and technological advantages, similar to shopify, but with greater capabilities. Currently, I am interning for a startup called Weat (I've just accepted the offer yesterday (9/9/2020), and I'm working with two highly intelligent Columbia Alumni. I'm building an application for them from scratch, to help them present their services as consultants. I will need to use Git version control, React to build out the frontend, and Python to build out the backend. This class would be a perfect opportunity to recieve guidance in this workflow (that is quite new to me), and ultimately build a better application.
+I want to create a full stack application that allows restaurants to have access to financial and technological advantages, similar to shopify, but with greater capabilities. Currently, I am interning for a startup called Weat (I've just accepted the offer yesterday (9/9/2020)), and I'm working with two highly intelligent Columbia Alumni. I'm building an application for them from scratch, to help them present their services as consultants. I will need to use Git version control, React to build out the frontend, and Python to build out the backend. This class would be a perfect opportunity to recieve guidance in this workflow (that is quite new to me), and ultimately build a better application.
 
 The COVID19 pandemic has brought restaurant businesses in a precarious position, with many facing or already experiencing closure. I truly believe that this application can help remedy the situation and have a positive social impact.
 
