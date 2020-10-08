@@ -15,12 +15,36 @@ def home():
 
 @app.route('/menu-items', methods=['GET'])
 def menu_items():
+    restaurant = None
     if 'restaurant' in request.args:
         restaurant = request.args['restaurant']
     if restaurant in data:
         return jsonify(data[restaurant])
     else:
-        return "<h1>Error</h1><p>Restaurant " + restaurant + " could not be found</p>" 
+        return "<h1>Error</h1><p>Restaurant " + restaurant + " could not be found.</p>" 
+
+@app.route('/num-orders', methods=['GET'])
+def num_orders():
+    restaurant = None
+    item = None
+    if 'restaurant' in request.args:
+        restaurant = request.args['restaurant']
+    if 'item' in request.args:
+        item = request.args['item']
+    if restaurant in data:
+        orders = data[restaurant][1]
+        print("AAAAAAA")
+        print(orders)
+        if item in orders:
+            return jsonify(orders[item])
+        else:
+            return "<h1>Error</h1><p>Item " + item + " could not be found in restaurant " + restaurant + ".</p>" 
+    else:
+        return "<h1>Error</h1><p>Restaurant " + restaurant + " could not be found.</p>" 
+
+@app.route('/get-restaurants', methods=['GET'])
+def get_restaurants():
+    return jsonify([restaurant for restaurant in data])
 
 def init():
     file = None
@@ -35,10 +59,11 @@ def init():
 def readData(line):
     restaurant = line[0]
     address = line[1]
-    orders = (line[2], line[3])
+    item = line[2]
+    quantity = line[3]
     if restaurant in data:
-        data[restaurant][1].append(orders)
+        data[restaurant][1][item] = quantity
     else:
-        data[restaurant] = (address, [orders])
+        data[restaurant] = (address, {item: quantity})
 
 app.run()
