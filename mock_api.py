@@ -8,7 +8,6 @@ data = {}
 @app.route('/', methods=['GET'])
 def home():
     data = init()
-    print(data)
     if data is None:
         return "<h1>Error</h1><p>Data could not be found. Please try again.</p>"
     return "<h1>API</h1><p>This is a mock API for managing Weat orders. Yum!</p>"
@@ -33,8 +32,6 @@ def num_orders():
         item = request.args['item']
     if restaurant in data:
         orders = data[restaurant][1]
-        print("AAAAAAA")
-        print(orders)
         if item in orders:
             return jsonify(orders[item])
         else:
