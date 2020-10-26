@@ -7,6 +7,8 @@ from firebase_admin import credentials
 import pandas as pd
 import numpy as np
 import random
+# import google_cloud_firestore 
+from google.cloud import firestore as fs
 
 cred = credentials.Certificate("./keys/firebaseAdminAuth.json")
 firebase_admin.initialize_app(cred)
@@ -60,15 +62,20 @@ def init():
     #build restaurants document
 
     rst_Ref.set({
-        u'id' : u'restaurants'
+        u'id' : u'restaurants',
+        u'numRestaurants' : 0
     })
 
     data = getData()
 
     for idx, rst in enumerate(data):
+        rst_Ref.update({
+            u'numRestaurants' : fs.Increment(1)
+        })
+
         new_rst_ref = rst_Ref.collection('rstList').document(rst['name'])
 
-        print(rst['loc'])
+        # print(rst['loc'])
 
         new_rst_ref.set({
             'id' : idx + 2, #set id in ascending from 0-n
@@ -83,22 +90,45 @@ def init():
                 u'price' : item['price']
             })
 
-def getItem():
-    rst_list = db.collection('root').document('restaurants').collection('rstList')
+def getRandomItem():
 
-    # rand_rst = rst_list[0]
+    restaurants_ref = db.document('root/restaurants')
 
-    # menu = rand_rst.collection('menu')
+    num_rst = restaurants_ref.numRestaurants
 
-    # rand_item = menu[0]
+    rand_num = random.randint(0,num_rst)
 
-    # print(rand_item.get().to_dict())
+    rst_stream = restaurants_ref.collection('rstList').stream()
+
+    for idx, doc in enumerate(rst_stream):
 
 
-    # /root/restaurants/rstList/Thai Villa/menu/Massaman Curry
+    rst_list = db.collection('root/restaurants/rstList').stream()
+
+    
+
+
+
+
+def getItem(mode):
+
+    if mode == 'random':
+        getRandomItem()
+    else:
+        # rst_list = db.collection('root/restaurants/rstList')
+
+        s = rst_list.stream()
+        print(s[0])
+
+        docs = db.collection(u'cities').stream()
+
+        for doc in docs:
+            print(f'{doc.id} => {doc.to_dict()}')
+
+    # for doc in s:
 
 def addTestOrders():
-    item = getItem()
+    item = getItem('random')
 
 if __name__ == "__main__":
     arguments = ['test']
