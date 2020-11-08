@@ -60,10 +60,16 @@ def getData():
 def init():
     rst_Ref = db.collection(u'root').document(u'restaurants')
     #build restaurants document
+    items_Ref = db.collection(u'root').document(u'items')
 
     rst_Ref.set({
         u'id' : u'restaurants',
         u'numRestaurants' : 0
+    })
+
+    items_Ref.set({
+        u'id' : u'items',
+        u'numItems' : 0
     })
 
     data = getData()
@@ -89,6 +95,13 @@ def init():
                 u'name' : item['name'],
                 u'price' : item['price']
             })
+            items_Ref.update({
+                u'numItems' : fs.Increment(1)
+            })
+            items_Ref.set({
+                u'name' : item['name'],
+                u'price' : item['price']
+            })
 
 def getRandomItem():
 
@@ -106,7 +119,7 @@ def getRandomItem():
 
     rst_list = db.collection('root/restaurants/rstList').stream()
 
-    
+
 
     
 
@@ -136,7 +149,7 @@ def addTestOrders():
 if __name__ == "__main__":
     print("hello")
     init()
-    addTestOrders()
+    # addTestOrders()
 
 
 

@@ -7,15 +7,13 @@ from firebase_admin import credentials
 import pandas as pd
 import numpy as np
 import random
-# import google_cloud_firestore 
+# import google_cloud_firestore
 from google.cloud import firestore as fs
-
 cred = credentials.Certificate("./keys/firebaseAdminAuth.json")
-# firebase_admin.initialize_app(cred)
-db = firestore.client()
 
 
 def getRestaurants():
+    db = firestore.client()
 
     rst_ref = db.collection(u'root/restaurants/rstList')
 
@@ -30,5 +28,9 @@ def getRestaurants():
     return rst_list
 
 
+def checkDocument(docPath):
+    db = firestore.client()
 
+    doc_ref = db.document(docPath)
 
+    return doc_ref.get().exists
