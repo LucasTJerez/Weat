@@ -1,6 +1,6 @@
 # WEAT
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![codecov](https://codecov.io/gh/LucasTJerez/Weat/branch/master/graph/badge.svg?token=0Z3X8WV6UI)](https://codecov.io/gh/LucasTJerez/Weat)
 
 Visit [Weat's officiale webpage](https://www.weat4you.com/) for more information
 
