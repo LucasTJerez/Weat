@@ -5,7 +5,7 @@
 Visit [Weat's officiale webpage](https://www.weat4you.com/) for more information
 
 
-## Revolutionizing Ordering Food
+## Revolutionizing Food Delivery
 
 We are building an app that allows customers to place orders from local NYC restaurants in advance, so that meals can be bulked delivered, saving up to 5x on on-demand delivery. Weat is an alternative to on-demand delivery apps like Grubhub, Postmates, and UberEats, that rewards its users for ordering food in advance.
 
