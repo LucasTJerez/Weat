@@ -1,32 +1,16 @@
-# WEAT
+# Weat
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![codecov](https://codecov.io/gh/LucasTJerez/Weat/branch/master/graph/badge.svg?token=0Z3X8WV6UI)](https://codecov.io/gh/LucasTJerez/Weat)
 
 Visit [Weat's officiale webpage](https://www.weat4you.com/) for more information
 
 
-## Application for Restaraunts that provide financial and technological services 
+## Revolutionizing Food Delivery
 
-I want to create a full stack application that allows restaurants to have access to financial and technological advantages, similar to shopify, but with greater capabilities. Currently, Tommy Gomez and I (Lucas Jerez) am interning for a startup called Weat. We will be working with two highly intelligent Columbia alumni who are currently employed at BCG. We will be building an application from scratch with the features that are listed bellow. 
+We are building an app that allows customers to place orders from local NYC restaurants in advance, so that meals can be bulked delivered, saving up to 5x on on-demand delivery. Weat is an alternative to on-demand delivery apps like Grubhub, Postmates, and UberEats, that rewards its users for ordering food in advance.
 
+Not only are the customers saving, restaurants no longer have to lose up to 30% of their revenue due to the inefficiency of on-demand delivery, and can also save by preparing orders in advance.
 
+## Tech Stack
 
-## Features
-
-Firstly, we will build a feature that allows their customers to easily subscribe to weekly meal packages. This is in order to help restaurants revitalize their business by providing them with an alternative diverse revenue stream.
-
-After this, we are looking to add more features such as financial reports, predictive customer activity, and even leveraging our platform's client's business data to provide insights that otherwise wouldn't be available. We are very much in the planning phase; we just have a rough idea of what we want to accomplish with this app.
-
-
-## User research & closing remarks
-
-One of my goals is to conduct customer research to pinpoint our potential customer's struggles and needs, and what features could benefit them from our app. Like Professor Paine quoted, we need to treat our users as co-developers, and so we will be spending time in the early stages conducting virtual interviews to see what we actually need to build.
-
-We will need to use Git version control, React for the front end, and Python the backend. 
-
-The COVID19 pandemic has brought restaurant businesses in a precarious position, with many facing or already experiencing closure. I truly believe that this application can help remedy the situation and have a positive social impact.
-
-
-
-
-
+We are using Firebase's Firestore, Authentication, and Cloud Functions as our backend, and we are building Andriod and IOS front ends using react-native.
