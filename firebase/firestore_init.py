@@ -62,6 +62,7 @@ def init():
     #build restaurants document
     items_Ref = db.collection(u'root').document(u'items')
 
+
     rst_Ref.set({
         u'id' : u'restaurants',
         u'numRestaurants' : 0
@@ -98,7 +99,9 @@ def init():
             items_Ref.update({
                 u'numItems' : fs.Increment(1)
             })
-            items_Ref.set({
+
+            new_item_Ref = items_Ref.collection('itemList').document(item['name'])
+            new_item_Ref.set({
                 u'name' : item['name'],
                 u'price' : item['price']
             })
