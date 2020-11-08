@@ -92,18 +92,21 @@ def init():
 
 def getRandomItem():
 
-    restaurants_ref = db.document('root/restaurants')
+    # restaurants_ref = db.document('root/restaurants')
 
-    num_rst = restaurants_ref.numRestaurants
+    # num_rst = restaurants_ref.numRestaurants
 
-    rand_num = random.randint(0,num_rst)
+    # rand_num = random.randint(0,num_rst)
 
-    rst_stream = restaurants_ref.collection('rstList').stream()
+    # rst_stream = restaurants_ref.collection('rstList').stream()
 
-    for idx, doc in enumerate(rst_stream):
+    # for idx, doc in enumerate(rst_stream):
+    #     if(idx)
 
 
     rst_list = db.collection('root/restaurants/rstList').stream()
+
+    
 
     
 
@@ -116,14 +119,14 @@ def getItem(mode):
         getRandomItem()
     else:
         # rst_list = db.collection('root/restaurants/rstList')
+        print("random item")
+        # s = rst_list.stream()
+        # print(s[0])
 
-        s = rst_list.stream()
-        print(s[0])
+        # docs = db.collection(u'cities').stream()
 
-        docs = db.collection(u'cities').stream()
-
-        for doc in docs:
-            print(f'{doc.id} => {doc.to_dict()}')
+        # for doc in docs:
+        #     print(f'{doc.id} => {doc.to_dict()}')
 
     # for doc in s:
 
@@ -131,18 +134,9 @@ def addTestOrders():
     item = getItem('random')
 
 if __name__ == "__main__":
-    arguments = ['test']
-
-    if len(sys.argv) != 2 or sys.argv[1] not in arguments:
-        print("You must input one of the following options:")
-        for arg in arguments:
-            print('\t'+arg)
-        sys.exit()
-
-    if sys.argv[1] == "test":
-        init()
-
-        addTestOrders()
+    print("hello")
+    init()
+    addTestOrders()
 
 
 
